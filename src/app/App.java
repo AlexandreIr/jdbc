@@ -18,13 +18,12 @@ public class App {
 			connection = DB.getConnection();
 			st = connection.createStatement();
 			rs = st.executeQuery("select * from department");
-			while(rs.next()) {
-				System.out.println(rs.getInt("Id")+" - "+rs.getString("Name"));
+			while (rs.next()) {
+				System.out.println(rs.getInt("Id") + " - " + rs.getString("Name"));
 			}
 		} catch (SQLException e) {
 			throw new DBException(e.getMessage());
-		}
-		finally {
+		} finally {
 			DB.closeResultSet(rs);
 			DB.closeStatement(st);
 			DB.closeConnection();
