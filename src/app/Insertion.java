@@ -17,7 +17,7 @@ public class Insertion {
 		Scanner sc = new Scanner(System.in);
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
-		System.out.print("Quantos vendedores deseja contratar?");
+		System.out.print("Quantos vendedores deseja contratar? ");
 		int qtd = sc.nextInt();
 		sc.nextLine();
 		try {
@@ -33,6 +33,7 @@ public class Insertion {
 				double salary = sc.nextDouble();
 				System.out.print("Digite o departamento do funcionário "+": ");
 				int departmentId = sc.nextInt();
+				sc.nextLine();
 				
 				ps = connection.prepareStatement(
 						"INSERT INTO seller"
@@ -46,7 +47,7 @@ public class Insertion {
 				ps.setInt(5, departmentId);
 				
 				int rowsAffected = ps.executeUpdate();
-				System.out.print("Feito!! funcionário "+name+" cadastrado com sucesso!");
+				System.out.println("Feito!! funcionário "+name+" cadastrado com sucesso!");
 				
 			}
 		} catch (SQLException e) {
