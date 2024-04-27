@@ -1,12 +1,12 @@
 package app;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-import java.sql.Date;
 
 import db.DB;
 
@@ -48,6 +48,7 @@ public class Insertion {
 				
 				int rowsAffected = ps.executeUpdate();
 				System.out.println("Feito!! funcionário "+name+" cadastrado com sucesso!");
+				System.out.println(rowsAffected + " linhas afetadas");
 				
 			}
 		} catch (SQLException e) {
