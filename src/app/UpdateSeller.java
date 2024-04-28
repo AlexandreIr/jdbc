@@ -8,7 +8,7 @@ import java.util.Scanner;
 import db.DB;
 import db.DBException;
 
-public class Update {
+public class UpdateSeller {
 
 	public static void main(String[] args) {
 		Connection connection = null;

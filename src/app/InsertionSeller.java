@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 import db.DB;
 
-public class Insertion {
+public class InsertionSeller {
 	public static void main(String[] args) {
 		Connection connection = null;
 		PreparedStatement ps = null;
